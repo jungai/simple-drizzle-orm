@@ -15,7 +15,7 @@ simple rest-api using express and dizzle-orm
 
 ```json
 {
-	"module": "commonjs",
+	"module": "esnext",
 	"moduleResolution": "nodenext"
 }
 ```
