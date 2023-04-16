@@ -1,0 +1,33 @@
+{
+	"name": "simple-dizzle-orm",
+	"version": "1.0.0",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "tsc -p ./tsconfig.json",
+		"check": "pnpm rome check ./src",
+		"format": "pnpm rome format ./src --write",
+		"generate": "pnpm drizzle-kit generate:pg --out=src/db/migrations/ --schema=src/db/schema.ts",
+		"introspect": "pnpm drizzle-kit introspect:pg --out=src/db/migrations/ --database=test --user=host --password=host --host=127.0.0.1",
+		"db:up": "pnpm drizzle-kit up:pg --out=src/db/migrations/",
+		"start": "node ."
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/cors": "^2.8.13",
+		"@types/express": "^4.17.17",
+		"@types/node": "^18.15.11",
+		"@types/pg": "^8.6.6",
+		"drizzle-kit": "^0.17.4",
+		"rome": "12.0.0",
+		"typescript": "^5.0.4"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.3",
+		"drizzle-orm": "^0.23.13",
+		"express": "^4.18.2",
+		"pg": "^8.10.0"
+	}
+}
